@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Key - Emergency Alert App Prototype</title>
+    <style>
+        :root {
+            --primary: #2E86AB;
+            --secondary: #A23B72;
+            --accent: #F18F01;
+            --light: #F7F7F7;
+            --dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: #f8f9fa;
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .how-it-works {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+        
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .tech-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .tech-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .code-preview {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+        
+        .repo-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .features, .tech-stack {
+                grid-template-columns: 1fr;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🛡️</div>
+        <h1>Guardian Key</h1>
+        <p class="tagline">An AI-enhanced emergency alert app that allows users to discreetly call for help by pressing both volume keys simultaneously.</p>
+    </header>
+    
+    <div class="container">
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <p>Guardian Key is a mobile application designed to help individuals in dangerous situations quickly and discreetly alert emergency contacts. By simply pressing both volume keys simultaneously, the app activates an emergency mode that records audio, analyzes it with AI for threats, and automatically sends alerts with location data.</p>
+            
+            <div class="repo-links">
+                <a href="https://github.com/your-username/Guardian-Key" class="btn">View on GitHub</a>
+                <a href="README.md" class="btn">View README</a>
+            </div>
+        </section>
+        
+        <section id="features">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Stealth Trigger</h3>
+                    <p>Press both volume keys simultaneously to activate emergency mode without drawing attention.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Voice Analysis</h3>
+                    <p>Automatically detects keywords like "help" and aggressive tones using machine learning.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Auto-Recording</h3>
+                    <p>Starts recording audio immediately when emergency mode is activated.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Backup</h3>
+                    <p>Securely uploads recordings to cloud storage as legal evidence.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h3>Location Sharing</h3>
+                    <p>Sends real-time location data to emergency contacts.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Smart Alerting</h3>
+                    <p>Automatically notifies emergency contacts when threats are detected.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Setup</h3>
+                        <p>User installs the app and configures emergency contacts in the settings.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Trigger</h3>
+                        <p>In an emergency, user simultaneously presses both volume keys for 2 seconds.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Recording & Analysis</h3>
+                        <p>App automatically starts recording and uses AI to analyze the audio for threats.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Alert</h3>
+                        <p>If a threat is detected, app sends alert with location and audio evidence to emergency contacts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="technology">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Voice recognition and threat detection using Python and TensorFlow</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📱</div>
+                    <h3>Android Development</h3>
+                    <p>Native Android app with volume key detection</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">☁️</div>
+                    <h3>Cloud Storage</h3>
+                    <p>Secure evidence storage with Firebase or AWS</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔗</div>
+                    <h3>Blockchain</h3>
+                    <p>Timestamping for legal evidence integrity</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="code">
+            <h2>Code Implementation</h2>
+            <p>Below is a simplified version of the volume key detection logic:</p>
+            
+            <div class="code-preview">
+                <pre><code>// Volume Key Detection for Android
+public class VolumeKeyService extends Service {
+    private boolean volumeUpPressed = false;
+    private boolean volumeDownPressed = false;
+    
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+            volumeUpPressed = true;
+        } else if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+            volumeDownPressed = true;
+        }
+        
+        // Check if both keys are pressed within 500ms
+        if (volumeUpPressed && volumeDownPressed) {
+            triggerEmergencyMode();
+            resetKeys();
+            return true;
+        }
+        
+        new Handler().postDelayed(this::resetKeys, 500);
+        return super.onKeyDown(keyCode, event);
+    }
+    
+    private void triggerEmergencyMode() {
+        startRecording();
+        new Thread(() -> analyzeAudioWithAI()).start();
+        sendEmergencyAlert();
+    }
+}</code></pre>
+            </div>
+            
+            <div class="repo-links">
+                <a href="android/VolumeKeyListener.java" class="btn">View Full Android Code</a>
+                <a href="ai-model/voice_analysis.py" class="btn">View AI Analysis Code</a>
+            </div>
+        </section>
+        
+        <section id="future">
+            <h2>Future Development</h2>
+            <ul>
+                <li>Integration with local authorities and emergency services</li>
+                <li>Blockchain-based evidence timestamping for legal proceedings</li>
+                <li>Wearable device integration for additional trigger options</li>
+                <li>Multi-language support for voice recognition</li>
+                <li>Community safety features and network effects</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Guardian Key - ECOM 7121 Innovation Lab Project</p>
+        <p>This is a conceptual prototype for academic purposes.</p>
+    </footer>
+</body>
+</html>
